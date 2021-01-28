@@ -1,0 +1,1229 @@
+2021-01-03T11:43:56.781974Z        100 [info ] ../src/host/main.cpp:439             | Run with following options:
+version=false
+enclave-file="./liblogging.virtual.so"
+enclave-type=2
+consensus=0
+worker-threads=0
+node-address="10.0.0.6:0"
+node-address-file="0.node_address"
+rpc-address="10.0.0.6:8000"
+rpc-address-file="0.rpc_address"
+public-rpc-address="10.0.0.6:8000"
+ledger-dir="0.ledger"
+snapshot-dir="0.snapshots"
+ledger-chunk-bytes=5000000
+snapshot-tx-interval=10000
+host-log-level=2
+log-format-json=false
+node-cert-file="0.pem"
+node-pid-file="./cchost.virtual.pid"
+sig-tx-interval=5000
+sig-ms-interval=1000
+circuit-size-shift=22
+raft-timeout-ms=100
+raft-election-timeout-ms=100000
+bft-view-change-timeout-ms=5000
+bft-status-interval-ms=100
+max-msg-size=24
+max-fragment-size=16
+tick-period-ms=10
+sn="CN=CCF Node"
+jwt-key-refresh-interval-s=1800
+memory-reserve-startup=0
+[start]
+network-cert-file="networkcert.pem"
+gov-script="gov.lua"
+member-info="member0_cert.pem,member0_enc_pubk.pem"
+join.network-cert-file="networkcert.pem"
+join.join-timer=1000
+recover.network-cert-file="networkcert.pem"
+
+2021-01-03T11:43:56.782022Z        100 [info ] ../src/host/main.cpp:484             | Recovery threshold unset. Defaulting to number of initial consortium members with a public encryption key (1).
+2021-01-03T11:43:56.792088Z        100 [info ] ../src/host/ledger.h:732             | Recovered ledger entries up to 0, committed to 0
+2021-01-03T11:43:56.792163Z        100 [info ] ../src/host/node_connections.h:160   | Listening for node-to-node on 10.0.0.6:46717
+2021-01-03T11:43:56.792204Z        100 [info ] ../src/host/rpc_connections.h:75     | Listening for RPCs on 10.0.0.6:8000
+2021-01-03T11:43:56.792281Z        100 [info ] ../src/host/main.cpp:702             | Creating new node: new network (with 1 initial member(s) and 1 member(s) required for recovery)
+2021-01-03T11:43:56.808865Z        100 [info ] ../src/host/main.cpp:769             | Created new node
+2021-01-03T11:43:56.808968Z -0.016 0   [trace] src/node/rpc/endpoint_registry.h:466 | Parsed a templated endpoint: log/private/raw_text/{id} became log/private/raw_text/([^/]+)
+2021-01-03T11:43:56.808975Z -0.016 0   [trace] src/node/rpc/endpoint_registry.h:469 | Component names are: id
+2021-01-03T11:43:56.808980Z -0.016 0   [debug] ../src/node/node_state.h:96          | Advancing to state "initialized" (from "uninitialized")
+2021-01-03T11:43:56.808983Z -0.017 0   [info ] ../src/node/node_state.h:1332        | Setting self node ID: 0
+2021-01-03T11:43:56.808985Z -0.017 0   [debug] ../src/consensus/aft/raft.h:1832     | Election index is 0
+2021-01-03T11:43:56.808988Z -0.017 0   [info ] ../src/consensus/aft/raft.h:1853     | Becoming leader 0: 2
+2021-01-03T11:43:56.808990Z -0.017 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T11:43:56.808993Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:466 | Parsed a templated endpoint: proposals/{proposal_id} became proposals/([^/]+)
+2021-01-03T11:43:56.808995Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:469 | Component names are: proposal_id
+2021-01-03T11:43:56.808998Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:466 | Parsed a templated endpoint: proposals/{proposal_id}/withdraw became proposals/([^/]+)/withdraw
+2021-01-03T11:43:56.809000Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:469 | Component names are: proposal_id
+2021-01-03T11:43:56.809003Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:466 | Parsed a templated endpoint: proposals/{proposal_id}/votes became proposals/([^/]+)/votes
+2021-01-03T11:43:56.809005Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:469 | Component names are: proposal_id
+2021-01-03T11:43:56.809008Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:466 | Parsed a templated endpoint: proposals/{proposal_id}/votes/{member_id} became proposals/([^/]+)/votes/([^/]+)
+2021-01-03T11:43:56.809010Z -0.017 0   [trace] src/node/rpc/endpoint_registry.h:469 | Component names are: proposal_id, member_id
+2021-01-03T11:43:56.809013Z -0.017 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:56.809018Z -0.017 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [5732 bytes]
+2021-01-03T11:43:56.809021Z -0.017 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:56.809023Z -0.017 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/create
+2021-01-03T11:43:56.809026Z -0.017 0   [debug] /src/node/rpc/member_frontend.h:1837 | Processing create RPC
+2021-01-03T11:43:56.809028Z -0.017 0   [info ] /src/node/rpc/member_frontend.h:1881 | Create node id: 0
+2021-01-03T11:43:56.809031Z -0.017 0   [info ] /src/node/rpc/member_frontend.h:1910 | Created service
+2021-01-03T11:43:56.809033Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.config' at version 1
+2021-01-03T11:43:56.809036Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.consensus' at version 1
+2021-01-03T11:43:56.809038Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.governance.scripts' at version 1
+2021-01-03T11:43:56.809040Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.member_acks' at version 1
+2021-01-03T11:43:56.809043Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.member_cert_ders' at version 1
+2021-01-03T11:43:56.809045Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.member_digests' at version 1
+2021-01-03T11:43:56.809048Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.members' at version 1
+2021-01-03T11:43:56.809050Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.nodes' at version 1
+2021-01-03T11:43:56.809052Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.service' at version 1
+2021-01-03T11:43:56.809055Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.values' at version 1
+2021-01-03T11:43:56.809057Z -0.017 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.whitelists' at version 1
+2021-01-03T11:43:56.809059Z -0.017 0   [debug] ../src/kv/store.h:969                | Store::commit 1
+2021-01-03T11:43:56.809062Z -0.017 0   [debug] ../src/node/history.h:85             | History [append] <sha256 abb025e161b08a9180729ae7f1172ce5ec5befa1b45daadfbacaf7a1da7e4e8d>
+2021-01-03T11:43:56.809064Z -0.017 0   [debug] ../src/kv/store.h:1023               | Batching 1 (7561)
+2021-01-03T11:43:56.809066Z -0.017 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:43:56.809069Z -0.017 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 1
+2021-01-03T11:43:56.809093Z -0.017 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 1
+2021-01-03T11:43:56.809097Z -0.017 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:43:56.809099Z -0.017 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 1, new_commit_bft_idx:9223372036854775807. last_idx: 1
+2021-01-03T11:43:56.809102Z -0.017 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 1 (ci: 0) (ti 2)
+2021-01-03T11:43:56.809105Z -0.017 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:56.809107Z -0.017 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [4 bytes]
+2021-01-03T11:43:56.809110Z -0.017 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:56.809112Z -0.017 0   [info ] ../src/node/node_state.h:1388        | Network TLS connections now accepted
+2021-01-03T11:43:56.809115Z -0.017 0   [debug] ./src/node/jwt_key_auto_refresh.h:74 | JWT key auto-refresh: Scheduling in 1800s
+2021-01-03T11:43:56.809117Z -0.017 0   [debug] ../src/node/node_state.h:96          | Advancing to state "partOfNetwork" (from "initialized")
+2021-01-03T11:43:56.809122Z -0.017 0   [info ] ../src/enclave/main.cpp:160          | Starting thread: 0
+2021-01-03T11:43:56.809125Z -0.017 0   [info ] ../src/enclave/main.cpp:167          | All threads are ready!
+2021-01-03T11:43:56.809127Z -0.017 0   [debug] ../src/enclave/enclave.h:175         | Running main thread
+2021-01-03T11:43:56.809130Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for OversizedMessage::fragment (4236346845)
+2021-01-03T11:43:56.809132Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for AdminMessage::stop (3411225317)
+2021-01-03T11:43:56.809134Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for AdminMessage::tick (1532375204)
+2021-01-03T11:43:56.809137Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for ccf::node_inbound (1097389895)
+2021-01-03T11:43:56.809139Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for consensus::ledger_entry (1486919655)
+2021-01-03T11:43:56.809141Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for consensus::ledger_no_entry (254818797)
+2021-01-03T11:43:56.809144Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for tls::tls_start (2325831429)
+2021-01-03T11:43:56.809146Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for tls::tls_inbound (1271228756)
+2021-01-03T11:43:56.809148Z -0.017 0   [debug] ../src/ds/messaging.h:107            | Setting handler for tls::tls_close (2181749397)
+2021-01-03T11:43:56.926232Z -0.040 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 2
+2021-01-03T11:43:56.929614Z -0.014 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:56.929623Z -0.014 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.932936Z -0.017 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:56.932944Z -0.017 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.932947Z -0.017 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:56.934148Z -0.010 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 123 bytes
+2021-01-03T11:43:56.934157Z -0.010 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.934160Z -0.010 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 94
+2021-01-03T11:43:56.934163Z -0.010 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 94 bytes
+2021-01-03T11:43:56.934165Z -0.010 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:56.934168Z -0.010 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:56.934170Z -0.010 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/primary_info
+2021-01-03T11:43:56.934173Z -0.010 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/primary_info, , [0 bytes])
+2021-01-03T11:43:56.934190Z -0.010 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.934193Z -0.010 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:56.935453Z -0.011 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:56.935462Z -0.011 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.935465Z -0.011 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:56.935468Z -0.011 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 2 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:56.935494Z -0.011 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 2
+2021-01-03T11:43:56.935505Z -0.011 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 2
+2021-01-03T11:43:56.992048Z -0.068 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 3
+2021-01-03T11:43:56.995438Z -0.023 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:56.995449Z -0.023 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.998753Z -0.017 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:56.998762Z -0.017 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.998765Z -0.017 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:56.999972Z -0.018 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:56.999980Z -0.018 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:56.999983Z -0.019 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:56.999986Z -0.019 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:56.999989Z -0.019 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:56.999992Z -0.019 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:56.999994Z -0.019 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:56.999997Z -0.019 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.000014Z -0.019 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.000017Z -0.019 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.001406Z -0.020 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.001415Z -0.020 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.001419Z -0.020 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.001431Z -0.020 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 3 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.001477Z -0.020 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 3
+2021-01-03T11:43:57.001498Z -0.020 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 3
+2021-01-03T11:43:57.119422Z -0.035 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 4
+2021-01-03T11:43:57.122730Z -0.029 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.122741Z -0.029 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.126009Z -0.023 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.126018Z -0.023 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.126021Z -0.023 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.127231Z -0.024 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.127240Z -0.024 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.127243Z -0.024 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.127246Z -0.024 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.127249Z -0.024 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.127251Z -0.024 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.127261Z -0.024 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.127264Z -0.024 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.127281Z -0.024 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.127285Z -0.024 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.128501Z -0.025 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.128510Z -0.025 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.128513Z -0.025 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.128516Z -0.025 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 4 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.128540Z -0.025 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 4
+2021-01-03T11:43:57.128545Z -0.025 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 4
+2021-01-03T11:43:57.245744Z -0.044 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 5
+2021-01-03T11:43:57.249106Z -0.039 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.249115Z -0.039 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.252446Z -0.033 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.252455Z -0.033 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.252458Z -0.033 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.253621Z -0.034 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.253631Z -0.034 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.253638Z -0.034 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.253644Z -0.034 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.253646Z -0.034 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.253649Z -0.034 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.253653Z -0.034 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.253655Z -0.034 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.253673Z -0.034 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.253697Z -0.034 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.254983Z -0.036 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.254992Z -0.036 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.255014Z -0.036 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.255017Z -0.036 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 5 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.255044Z -0.036 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 5
+2021-01-03T11:43:57.255049Z -0.036 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 5
+2021-01-03T11:43:57.374935Z -0.052 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 6
+2021-01-03T11:43:57.379388Z -0.047 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.379404Z -0.047 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.382857Z -0.040 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.382866Z -0.040 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.382870Z -0.040 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.384072Z -0.042 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.384081Z -0.042 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.384084Z -0.042 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.384086Z -0.042 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.384089Z -0.042 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.384091Z -0.042 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.384094Z -0.042 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.384097Z -0.042 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.384114Z -0.042 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.384117Z -0.042 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.385375Z -0.043 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.385383Z -0.043 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.385387Z -0.043 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.385390Z -0.043 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 6 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.385414Z -0.043 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 6
+2021-01-03T11:43:57.385419Z -0.043 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 6
+2021-01-03T11:43:57.503074Z -0.063 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 7
+2021-01-03T11:43:57.506422Z -0.057 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.506431Z -0.057 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.509687Z -0.051 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.509697Z -0.051 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.509700Z -0.051 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.510898Z -0.052 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.510907Z -0.052 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.510910Z -0.052 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.510913Z -0.052 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.510915Z -0.052 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.510918Z -0.052 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.510921Z -0.052 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.510923Z -0.052 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.510940Z -0.052 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.510950Z -0.052 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.512192Z -0.054 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.512201Z -0.054 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.512204Z -0.054 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.512207Z -0.054 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 7 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.512228Z -0.054 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 7
+2021-01-03T11:43:57.512233Z -0.054 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 7
+2021-01-03T11:43:57.626827Z -0.062 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 8
+2021-01-03T11:43:57.630137Z -0.066 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.630147Z -0.066 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.633998Z -0.060 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.634011Z -0.060 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.634014Z -0.060 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.635221Z -0.061 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.635230Z -0.061 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.635234Z -0.061 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.635237Z -0.061 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.635239Z -0.061 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.635242Z -0.061 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.635245Z -0.061 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.635247Z -0.061 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.635265Z -0.061 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.635270Z -0.061 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.636561Z -0.062 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.636570Z -0.062 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.636573Z -0.062 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.636576Z -0.062 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 8 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.636599Z -0.062 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 8
+2021-01-03T11:43:57.636616Z -0.053 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 8
+2021-01-03T11:43:57.747807Z -0.070 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 9
+2021-01-03T11:43:57.751174Z -0.074 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.751182Z -0.074 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.755541Z -0.067 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.755550Z -0.067 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.755554Z -0.067 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.756755Z -0.068 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.756763Z -0.068 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.756767Z -0.068 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.756769Z -0.068 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.756772Z -0.068 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.756774Z -0.068 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.756777Z -0.068 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.756779Z -0.068 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.756796Z -0.068 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.756800Z -0.068 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.758052Z -0.070 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.758061Z -0.070 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.758064Z -0.070 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.758067Z -0.070 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 9 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.758091Z -0.070 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 9
+2021-01-03T11:43:57.758096Z -0.070 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 9
+2021-01-03T11:43:57.875276Z -0.080 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 10
+2021-01-03T11:43:57.875302Z -0.070 0   [debug] ../src/node/history.h:699            | Signed at 2 in view: 2 commit was: -9223372036854775808.0
+2021-01-03T11:43:57.875305Z -0.070 0   [debug] ../src/kv/store.h:969                | Store::commit 2 globally_committable
+2021-01-03T11:43:57.876398Z -0.071 0   [trace] ../src/node/history.h:332            | mt_serialize_size 80
+2021-01-03T11:43:57.876407Z -0.071 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.internal.signatures' at version 2
+2021-01-03T11:43:57.876410Z -0.071 0   [debug] ../src/node/history.h:85             | History [append] <sha256 f0c72ec894e9f8a83dc5333d73a1e7c0c90f06ecdf5f61cfb3a1d947772f2b4e>
+2021-01-03T11:43:57.876413Z -0.071 0   [debug] ../src/kv/store.h:1023               | Batching 2 (371)
+2021-01-03T11:43:57.876416Z -0.071 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:43:57.876418Z -0.071 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 2 committable
+2021-01-03T11:43:57.876429Z -0.071 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 2
+2021-01-03T11:43:57.876432Z -0.071 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:43:57.876435Z -0.071 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 2, new_commit_bft_idx:9223372036854775807. last_idx: 2
+2021-01-03T11:43:57.876437Z -0.071 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 2 (ci: 0) (ti 2)
+2021-01-03T11:43:57.876440Z -0.071 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T11:43:57.876442Z -0.071 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T11:43:57.876445Z -0.071 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 9fa032aedc50f410e55ac50e04d33d52a2b754104baf358219c8cb61c2ac3e3e>
+2021-01-03T11:43:57.876448Z -0.071 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 2
+2021-01-03T11:43:57.879735Z -0.074 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.879745Z -0.074 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.883151Z -0.069 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.883160Z -0.069 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.883163Z -0.069 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.884364Z -0.070 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.884373Z -0.070 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.884376Z -0.070 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.884378Z -0.070 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.884381Z -0.070 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.884384Z -0.070 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.884387Z -0.070 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.884390Z -0.070 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.884406Z -0.070 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.884410Z -0.070 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.885603Z -0.071 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.885613Z -0.071 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.885616Z -0.071 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.885619Z -0.071 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 10 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.885643Z -0.071 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 10
+2021-01-03T11:43:57.885648Z -0.071 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 10
+2021-01-03T11:43:57.892614Z -0.078 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 11
+2021-01-03T11:43:57.895957Z -0.071 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.895966Z -0.071 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.899269Z -0.075 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.899277Z -0.075 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.899281Z -0.075 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.900474Z -0.076 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 117 bytes
+2021-01-03T11:43:57.900483Z -0.076 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.900486Z -0.076 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 88
+2021-01-03T11:43:57.900489Z -0.076 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 88 bytes
+2021-01-03T11:43:57.900492Z -0.076 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.900494Z -0.076 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.900497Z -0.076 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/commit
+2021-01-03T11:43:57.900499Z -0.076 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/commit, , [0 bytes])
+2021-01-03T11:43:57.900521Z -0.076 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.900525Z -0.076 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.901771Z -0.077 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.901780Z -0.077 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.901784Z -0.077 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.901786Z -0.077 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 11 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.901807Z -0.077 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 11
+2021-01-03T11:43:57.901822Z -0.067 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 11
+2021-01-03T11:43:57.906936Z -0.072 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 12
+2021-01-03T11:43:57.911336Z -0.077 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.911345Z -0.077 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.914591Z -0.071 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:57.914600Z -0.071 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.914603Z -0.071 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.915795Z -0.072 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 134 bytes
+2021-01-03T11:43:57.915804Z -0.072 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.915807Z -0.072 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 105
+2021-01-03T11:43:57.915810Z -0.072 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 105 bytes
+2021-01-03T11:43:57.915813Z -0.072 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.915815Z -0.072 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.915818Z -0.072 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/local_tx?view=2&seqno=2
+2021-01-03T11:43:57.915821Z -0.072 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/local_tx, view=2&seqno=2, [0 bytes])
+2021-01-03T11:43:57.915838Z -0.072 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.915842Z -0.072 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.917091Z -0.074 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.917100Z -0.074 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.917103Z -0.074 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.917106Z -0.074 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 12 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.917127Z -0.074 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 12
+2021-01-03T11:43:57.917132Z -0.074 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 12
+2021-01-03T11:43:57.922006Z -0.069 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 13
+2021-01-03T11:43:57.927048Z -0.074 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:57.927058Z -0.074 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.934382Z -0.081 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 766 bytes
+2021-01-03T11:43:57.934396Z -0.081 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.934400Z -0.081 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.935588Z -0.073 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 134 bytes
+2021-01-03T11:43:57.935597Z -0.073 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.935600Z -0.073 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 105
+2021-01-03T11:43:57.935603Z -0.073 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 105 bytes
+2021-01-03T11:43:57.935605Z -0.073 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:57.935608Z -0.073 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:57.935610Z -0.073 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/ack/update_state_digest
+2021-01-03T11:43:57.935613Z -0.073 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/ack/update_state_digest, , [0 bytes])
+2021-01-03T11:43:57.935616Z -0.073 0   [debug] ../src/kv/store.h:969                | Store::commit 3
+2021-01-03T11:43:57.935618Z -0.073 0   [debug] ../src/node/history.h:85             | History [append] <sha256 6a46d1020ab56c28812516c618b7b081268c9213b1563eb302fc9a719c739c29>
+2021-01-03T11:43:57.935621Z -0.073 0   [debug] ../src/kv/store.h:1023               | Batching 3 (171)
+2021-01-03T11:43:57.935623Z -0.073 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:43:57.935626Z -0.073 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 3
+2021-01-03T11:43:57.935633Z -0.073 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 3
+2021-01-03T11:43:57.935636Z -0.073 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:43:57.935639Z -0.073 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 3, new_commit_bft_idx:9223372036854775807. last_idx: 3
+2021-01-03T11:43:57.935641Z -0.073 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 3 (ci: 2) (ti 2)
+2021-01-03T11:43:57.935659Z -0.073 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.935663Z -0.073 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:57.935809Z -0.073 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:57.935817Z -0.073 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:57.935821Z -0.073 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:57.935824Z -0.073 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 13 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:57.935848Z -0.073 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 13
+2021-01-03T11:43:57.935853Z -0.073 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 13
+2021-01-03T11:43:57.998137Z -0.117 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 14
+2021-01-03T11:43:58.001523Z -0.082 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:58.001531Z -0.082 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.008963Z -0.079 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 766 bytes
+2021-01-03T11:43:58.008971Z -0.079 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.008974Z -0.079 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:58.010180Z -0.081 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 642 bytes
+2021-01-03T11:43:58.010195Z -0.081 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.010198Z -0.081 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 613
+2021-01-03T11:43:58.010201Z -0.081 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 613 bytes
+2021-01-03T11:43:58.010203Z -0.081 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:58.010206Z -0.081 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [84 bytes]
+2021-01-03T11:43:58.010208Z -0.081 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:58.010211Z -0.081 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/ack
+2021-01-03T11:43:58.010214Z -0.081 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/ack, , [84 bytes])
+2021-01-03T11:43:58.010216Z -0.081 0   [debug] ../src/kv/store.h:969                | Store::commit 4
+2021-01-03T11:43:58.010219Z -0.081 0   [debug] ../src/node/history.h:85             | History [append] <sha256 d35317f4350c2abab5b704cde5b2d1c38b1ea9a631d0c4d584aca2044d417da3>
+2021-01-03T11:43:58.010221Z -0.081 0   [debug] ../src/kv/store.h:1023               | Batching 4 (1639)
+2021-01-03T11:43:58.010224Z -0.081 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:43:58.010226Z -0.081 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 4
+2021-01-03T11:43:58.010236Z -0.081 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 4
+2021-01-03T11:43:58.010239Z -0.081 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:43:58.010242Z -0.081 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 4, new_commit_bft_idx:9223372036854775807. last_idx: 4
+2021-01-03T11:43:58.010244Z -0.081 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 4 (ci: 2) (ti 2)
+2021-01-03T11:43:58.010261Z -0.081 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.010265Z -0.081 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:58.011519Z -0.082 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:58.011528Z -0.082 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.011531Z -0.082 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:58.011533Z -0.082 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 14 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:58.011556Z -0.082 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 14
+2021-01-03T11:43:58.011569Z -0.072 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 14
+2021-01-03T11:43:58.067548Z -0.119 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 15
+2021-01-03T11:43:58.070924Z -0.084 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:58.070934Z -0.084 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.078269Z -0.082 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 767 bytes
+2021-01-03T11:43:58.078278Z -0.082 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.078281Z -0.082 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:58.079482Z -0.083 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 1352 bytes
+2021-01-03T11:43:58.079492Z -0.083 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.079495Z -0.083 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 1323
+2021-01-03T11:43:58.079504Z -0.083 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 1323 bytes
+2021-01-03T11:43:58.079507Z -0.083 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:58.079509Z -0.083 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [791 bytes]
+2021-01-03T11:43:58.079512Z -0.083 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:58.079515Z -0.083 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/proposals
+2021-01-03T11:43:58.079517Z -0.083 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/proposals, , [791 bytes])
+2021-01-03T11:43:58.079520Z -0.083 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.governance.history' at version 5
+2021-01-03T11:43:58.079523Z -0.083 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.proposals' at version 5
+2021-01-03T11:43:58.079525Z -0.083 0   [debug] ../src/kv/store.h:969                | Store::commit 5
+2021-01-03T11:43:58.079528Z -0.083 0   [debug] ../src/node/history.h:85             | History [append] <sha256 c90ccf72cd1f81760f26028430b68bc715b2b4372bf5e9190c6e0dc7f0116f96>
+2021-01-03T11:43:58.079530Z -0.083 0   [debug] ../src/kv/store.h:1023               | Batching 5 (1955)
+2021-01-03T11:43:58.079532Z -0.083 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:43:58.079535Z -0.083 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 5
+2021-01-03T11:43:58.079545Z -0.083 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 5
+2021-01-03T11:43:58.079548Z -0.083 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:43:58.079551Z -0.083 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 5, new_commit_bft_idx:9223372036854775807. last_idx: 5
+2021-01-03T11:43:58.079553Z -0.083 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 5 (ci: 2) (ti 2)
+2021-01-03T11:43:58.079571Z -0.083 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.079575Z -0.083 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:58.080826Z -0.084 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:58.080835Z -0.084 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.080839Z -0.084 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:58.080841Z -0.084 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 15 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:58.080866Z -0.084 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 15
+2021-01-03T11:43:58.080962Z -0.084 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 15
+2021-01-03T11:43:58.137574Z -0.121 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 16
+2021-01-03T11:43:58.142042Z -0.087 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:58.142051Z -0.087 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.149613Z -0.094 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 765 bytes
+2021-01-03T11:43:58.149623Z -0.094 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.149626Z -0.094 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:58.150832Z -0.086 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 596 bytes
+2021-01-03T11:43:58.150841Z -0.086 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.150844Z -0.086 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 567
+2021-01-03T11:43:58.150853Z -0.086 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 567 bytes
+2021-01-03T11:43:58.150855Z -0.086 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:58.150858Z -0.086 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:58.150861Z -0.086 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:58.956423Z -0.137 0   [debug] ../src/node/history.h:699            | Signed at 6 in view: 2 commit was: 2.2
+2021-01-03T11:43:58.956447Z -0.137 0   [debug] ../src/kv/store.h:969                | Store::commit 6 globally_committable
+2021-01-03T11:43:58.958650Z -0.139 0   [trace] ../src/node/history.h:332            | mt_serialize_size 208
+2021-01-03T11:43:58.958660Z -0.139 0   [debug] ../src/node/history.h:85             | History [append] <sha256 793599040f3905c8171a0808fe71f8260c78f48c3231ecaad459d286e6546932>
+2021-01-03T11:43:58.958664Z -0.139 0   [debug] ../src/kv/store.h:1023               | Batching 6 (490)
+2021-01-03T11:43:58.958667Z -0.139 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:43:58.958670Z -0.139 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 6 committable
+2021-01-03T11:43:58.958683Z -0.139 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 6
+2021-01-03T11:43:58.958686Z -0.139 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:43:58.958689Z -0.139 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 6, new_commit_bft_idx:9223372036854775807. last_idx: 6
+2021-01-03T11:43:58.958692Z -0.139 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 6 (ci: 2) (ti 2)
+2021-01-03T11:43:58.958694Z -0.139 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T11:43:58.958697Z -0.139 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T11:43:58.958700Z -0.139 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 f1be97fd0d89b9e1796333a731f0f5120c9d09d8ff7a0d766705064bcc90705a>
+2021-01-03T11:43:58.958703Z -0.139 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 6
+2021-01-03T11:43:59.190753Z -0.146 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 1373 bytes
+2021-01-03T11:43:59.190778Z -0.146 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.190781Z -0.146 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 1344
+2021-01-03T11:43:59.190784Z -0.146 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 1344 bytes
+2021-01-03T11:43:59.190787Z -0.146 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [1344 bytes]
+2021-01-03T11:43:59.190790Z -0.146 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.190792Z -0.146 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/proposals/0/votes
+2021-01-03T11:43:59.190795Z -0.146 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/proposals/0/votes, , [1344 bytes])
+2021-01-03T11:43:59.190798Z -0.146 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.user_cert_ders' at version 7
+2021-01-03T11:43:59.190801Z -0.146 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.user_digests' at version 7
+2021-01-03T11:43:59.190803Z -0.146 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.users' at version 7
+2021-01-03T11:43:59.190805Z -0.146 0   [debug] ../src/kv/store.h:969                | Store::commit 7
+2021-01-03T11:43:59.190808Z -0.146 0   [debug] ../src/node/history.h:85             | History [append] <sha256 9e467cf047ea6df9d3e3bb065fb60537e6ee3592ee9fe072e252adb71ce46cf8>
+2021-01-03T11:43:59.190819Z -0.146 0   [debug] ../src/kv/store.h:1023               | Batching 7 (5118)
+2021-01-03T11:43:59.190822Z -0.146 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:43:59.190824Z -0.146 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 7
+2021-01-03T11:43:59.190838Z -0.146 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 7
+2021-01-03T11:43:59.190841Z -0.146 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:43:59.190844Z -0.146 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 7, new_commit_bft_idx:9223372036854775807. last_idx: 7
+2021-01-03T11:43:59.190847Z -0.146 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 7 (ci: 6) (ti 2)
+2021-01-03T11:43:59.190887Z -0.146 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.190891Z -0.146 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.192221Z -0.148 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.192230Z -0.148 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.192233Z -0.148 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.192236Z -0.148 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 16 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.192260Z -0.148 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 16
+2021-01-03T11:43:59.193331Z -0.149 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 16
+2021-01-03T11:43:59.198364Z -0.144 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 17
+2021-01-03T11:43:59.202864Z -0.148 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:59.202874Z -0.148 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.206228Z -0.152 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:59.206236Z -0.152 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.206240Z -0.152 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.207516Z -0.144 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:43:59.207525Z -0.144 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.207528Z -0.144 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:43:59.207531Z -0.144 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:43:59.207533Z -0.144 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:59.207536Z -0.144 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.207538Z -0.144 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:43:59.207541Z -0.144 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:43:59.207560Z -0.144 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.207564Z -0.144 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.208867Z -0.145 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.208876Z -0.145 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.208879Z -0.145 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.208882Z -0.145 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 17 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.208908Z -0.145 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 17
+2021-01-03T11:43:59.208913Z -0.145 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 17
+2021-01-03T11:43:59.322286Z -0.164 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 18
+2021-01-03T11:43:59.325601Z -0.157 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:59.325611Z -0.157 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.328910Z -0.151 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:59.328919Z -0.151 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.328922Z -0.151 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.330116Z -0.153 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:43:59.330125Z -0.153 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.330129Z -0.153 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:43:59.330132Z -0.153 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:43:59.330135Z -0.153 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:59.330137Z -0.153 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.330140Z -0.153 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:43:59.330143Z -0.153 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:43:59.330161Z -0.153 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.330165Z -0.153 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.331380Z -0.154 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.331389Z -0.154 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.331392Z -0.154 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.331395Z -0.154 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 18 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.331420Z -0.154 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 18
+2021-01-03T11:43:59.331426Z -0.154 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 18
+2021-01-03T11:43:59.451477Z -0.172 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 19
+2021-01-03T11:43:59.454821Z -0.165 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:59.454830Z -0.165 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.466866Z -0.167 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:59.466888Z -0.167 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.466891Z -0.167 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.468097Z -0.159 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:43:59.468109Z -0.159 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.468113Z -0.159 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:43:59.468116Z -0.159 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:43:59.468128Z -0.159 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:59.468147Z -0.159 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.468150Z -0.159 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:43:59.468153Z -0.159 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:43:59.468190Z -0.159 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.468195Z -0.159 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.469511Z -0.160 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 19
+2021-01-03T11:43:59.469523Z -0.160 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.469527Z -0.160 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.469530Z -0.160 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.469533Z -0.160 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 19 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.470642Z -0.161 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 19
+2021-01-03T11:43:59.582539Z -0.179 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 20
+2021-01-03T11:43:59.585888Z -0.172 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:59.585898Z -0.172 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.589209Z -0.167 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:59.589218Z -0.167 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.589221Z -0.167 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.590414Z -0.168 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:43:59.590424Z -0.168 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.590427Z -0.168 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:43:59.590430Z -0.168 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:43:59.590432Z -0.168 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:59.590435Z -0.168 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.590437Z -0.168 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:43:59.590440Z -0.168 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:43:59.590458Z -0.168 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.590462Z -0.168 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.591707Z -0.169 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.591716Z -0.169 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.591720Z -0.169 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.591723Z -0.169 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 20 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.591745Z -0.169 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 20
+2021-01-03T11:43:59.591750Z -0.169 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 20
+2021-01-03T11:43:59.713202Z -0.187 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 21
+2021-01-03T11:43:59.716561Z -0.180 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:59.716572Z -0.180 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.719911Z -0.174 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:59.719920Z -0.174 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.719923Z -0.174 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.721127Z -0.176 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:43:59.721136Z -0.176 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.721140Z -0.176 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:43:59.721143Z -0.176 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:43:59.721145Z -0.176 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:59.721148Z -0.176 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.721150Z -0.176 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:43:59.721153Z -0.176 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:43:59.721170Z -0.176 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.721174Z -0.176 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.722424Z -0.177 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.722434Z -0.177 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.722437Z -0.177 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.722440Z -0.177 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 21 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.722463Z -0.177 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 21
+2021-01-03T11:43:59.722468Z -0.177 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 21
+2021-01-03T11:43:59.838558Z -0.198 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 22
+2021-01-03T11:43:59.841932Z -0.192 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:59.841941Z -0.192 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.845253Z -0.186 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:59.845261Z -0.186 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.845265Z -0.186 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.846433Z -0.187 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:43:59.846443Z -0.187 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.846446Z -0.187 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:43:59.846448Z -0.187 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:43:59.846451Z -0.187 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:59.846454Z -0.187 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.846456Z -0.187 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:43:59.846466Z -0.187 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:43:59.846484Z -0.187 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.846488Z -0.187 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.850240Z -0.191 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 22
+2021-01-03T11:43:59.850260Z -0.182 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.850264Z -0.182 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.850267Z -0.182 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.850269Z -0.182 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 22 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.851392Z -0.183 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 22
+2021-01-03T11:43:59.964367Z -0.201 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 23
+2021-01-03T11:43:59.968801Z -0.195 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:43:59.968811Z -0.195 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.972125Z -0.189 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:43:59.972134Z -0.189 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.972137Z -0.189 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.973345Z -0.190 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:43:59.973353Z -0.190 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.973357Z -0.190 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:43:59.973360Z -0.190 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:43:59.973362Z -0.190 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:43:59.973365Z -0.190 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:43:59.973368Z -0.190 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:43:59.973370Z -0.190 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:43:59.973388Z -0.190 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.973392Z -0.190 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:43:59.974671Z -0.191 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:43:59.974680Z -0.191 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:43:59.974683Z -0.191 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:43:59.974686Z -0.191 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 23 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:43:59.974710Z -0.191 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 23
+2021-01-03T11:43:59.974714Z -0.191 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 23
+2021-01-03T11:44:00.036051Z -0.196 0   [debug] ../src/node/history.h:699            | Signed at 8 in view: 2 commit was: 2.6
+2021-01-03T11:44:00.036073Z -0.196 0   [debug] ../src/kv/store.h:969                | Store::commit 8 globally_committable
+2021-01-03T11:44:00.038238Z -0.198 0   [trace] ../src/node/history.h:332            | mt_serialize_size 272
+2021-01-03T11:44:00.038255Z -0.198 0   [debug] ../src/node/history.h:85             | History [append] <sha256 093265a778974b52234df49bb080cb6edee678b7777bad795d1ee61363c45ee8>
+2021-01-03T11:44:00.038259Z -0.198 0   [debug] ../src/kv/store.h:1023               | Batching 8 (557)
+2021-01-03T11:44:00.038262Z -0.198 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:44:00.038264Z -0.198 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 8 committable
+2021-01-03T11:44:00.038278Z -0.198 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 8
+2021-01-03T11:44:00.038281Z -0.198 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:44:00.038283Z -0.198 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 8, new_commit_bft_idx:9223372036854775807. last_idx: 8
+2021-01-03T11:44:00.038286Z -0.198 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 8 (ci: 6) (ti 2)
+2021-01-03T11:44:00.038289Z -0.198 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T11:44:00.038292Z -0.198 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T11:44:00.038294Z -0.198 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 fca41ce213d15383f366f261b781b9f0d707cf14bf72cc53bfe6570dd268738f>
+2021-01-03T11:44:00.038297Z -0.198 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 8
+2021-01-03T11:44:00.097449Z -0.220 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 24
+2021-01-03T11:44:00.100861Z -0.204 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.100872Z -0.204 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.104189Z -0.199 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:00.104198Z -0.199 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.104201Z -0.199 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.105400Z -0.200 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 128 bytes
+2021-01-03T11:44:00.105409Z -0.200 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.105412Z -0.200 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 99
+2021-01-03T11:44:00.105415Z -0.200 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 99 bytes
+2021-01-03T11:44:00.105417Z -0.200 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.105426Z -0.200 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.105430Z -0.200 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=7
+2021-01-03T11:44:00.105433Z -0.200 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=7, [0 bytes])
+2021-01-03T11:44:00.105450Z -0.200 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.105454Z -0.200 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.106687Z -0.201 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.106696Z -0.201 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.106700Z -0.201 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.106702Z -0.201 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 24 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.106727Z -0.201 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 24
+2021-01-03T11:44:00.106732Z -0.201 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 24
+2021-01-03T11:44:00.167579Z -0.243 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 25
+2021-01-03T11:44:00.170964Z -0.208 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.170973Z -0.208 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.179329Z -0.208 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 766 bytes
+2021-01-03T11:44:00.179338Z -0.208 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.179342Z -0.208 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.180554Z -0.209 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 635 bytes
+2021-01-03T11:44:00.180563Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.180566Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 606
+2021-01-03T11:44:00.180569Z -0.209 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 606 bytes
+2021-01-03T11:44:00.180572Z -0.209 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.180575Z -0.209 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [71 bytes]
+2021-01-03T11:44:00.180577Z -0.209 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.180580Z -0.209 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/proposals
+2021-01-03T11:44:00.180582Z -0.209 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/proposals, , [71 bytes])
+2021-01-03T11:44:00.180585Z -0.209 0   [debug] ../src/kv/store.h:969                | Store::commit 9
+2021-01-03T11:44:00.180587Z -0.209 0   [debug] ../src/node/history.h:85             | History [append] <sha256 433e37f4239fd902d543a392ee67f1687226fc42ce539cbd0510b60e8a77e3e8>
+2021-01-03T11:44:00.180590Z -0.209 0   [debug] ../src/kv/store.h:1023               | Batching 9 (555)
+2021-01-03T11:44:00.180592Z -0.209 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:44:00.180595Z -0.209 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 9
+2021-01-03T11:44:00.180603Z -0.209 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 9
+2021-01-03T11:44:00.180606Z -0.209 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:44:00.180608Z -0.209 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 9, new_commit_bft_idx:9223372036854775807. last_idx: 9
+2021-01-03T11:44:00.180611Z -0.209 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 9 (ci: 8) (ti 2)
+2021-01-03T11:44:00.180628Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.180632Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.181888Z -0.210 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.181898Z -0.210 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.181902Z -0.210 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.181905Z -0.210 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 25 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.181929Z -0.210 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 25
+2021-01-03T11:44:00.181943Z -0.200 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 25
+2021-01-03T11:44:00.237818Z -0.246 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 26
+2021-01-03T11:44:00.242247Z -0.211 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.242264Z -0.211 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.249546Z -0.218 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 766 bytes
+2021-01-03T11:44:00.249555Z -0.218 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.249558Z -0.218 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.250761Z -0.209 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 760 bytes
+2021-01-03T11:44:00.250770Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.250774Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 731
+2021-01-03T11:44:00.250777Z -0.209 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 731 bytes
+2021-01-03T11:44:00.250779Z -0.209 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.250782Z -0.209 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [191 bytes]
+2021-01-03T11:44:00.250785Z -0.209 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.250787Z -0.209 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/proposals/1/votes
+2021-01-03T11:44:00.250790Z -0.209 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/proposals/1/votes, , [191 bytes])
+2021-01-03T11:44:00.250792Z -0.209 0   [debug] ../src/kv/store.h:227                | Adding newly created map 'public:ccf.gov.shares' at version 10
+2021-01-03T11:44:00.250795Z -0.209 0   [debug] ../src/kv/store.h:969                | Store::commit 10
+2021-01-03T11:44:00.250797Z -0.209 0   [debug] ../src/node/history.h:85             | History [append] <sha256 a93754698ff9ef71f67199d6ecb4680bd5455ebda8d077cf96f0dc4ca61291a0>
+2021-01-03T11:44:00.250800Z -0.209 0   [debug] ../src/kv/store.h:1023               | Batching 10 (1895)
+2021-01-03T11:44:00.250802Z -0.209 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:44:00.250805Z -0.209 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 10
+2021-01-03T11:44:00.250815Z -0.209 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 10
+2021-01-03T11:44:00.250818Z -0.209 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:44:00.250820Z -0.209 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 10, new_commit_bft_idx:9223372036854775807. last_idx: 10
+2021-01-03T11:44:00.250823Z -0.209 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 10 (ci: 8) (ti 2)
+2021-01-03T11:44:00.250840Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.250844Z -0.209 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.252098Z -0.211 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.252107Z -0.211 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.252110Z -0.211 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.252113Z -0.211 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 26 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.252137Z -0.211 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 26
+2021-01-03T11:44:00.252141Z -0.211 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 26
+2021-01-03T11:44:00.258349Z -0.207 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 27
+2021-01-03T11:44:00.262757Z -0.211 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.262771Z -0.211 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.266050Z -0.206 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:00.266058Z -0.206 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.266062Z -0.206 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.267250Z -0.207 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:00.267259Z -0.207 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.267262Z -0.207 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:00.267264Z -0.207 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:00.267267Z -0.207 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.267269Z -0.207 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.267272Z -0.207 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:00.267275Z -0.207 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:00.267292Z -0.207 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.267296Z -0.207 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.268580Z -0.208 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.268590Z -0.208 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.268593Z -0.208 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.268596Z -0.208 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 27 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.268635Z -0.208 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 27
+2021-01-03T11:44:00.268640Z -0.208 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 27
+2021-01-03T11:44:00.385076Z -0.230 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 28
+2021-01-03T11:44:00.388424Z -0.223 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.388433Z -0.223 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.391741Z -0.217 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:00.391750Z -0.217 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.391754Z -0.217 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.392948Z -0.218 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:00.392957Z -0.218 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.392960Z -0.218 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:00.392964Z -0.218 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:00.392966Z -0.218 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.392969Z -0.218 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.392972Z -0.218 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:00.392975Z -0.218 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:00.392993Z -0.219 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.393003Z -0.219 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.394526Z -0.220 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.394536Z -0.220 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.394539Z -0.220 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.394542Z -0.220 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 28 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.394566Z -0.220 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 28
+2021-01-03T11:44:00.394571Z -0.220 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 28
+2021-01-03T11:44:00.511919Z -0.234 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 29
+2021-01-03T11:44:00.515285Z -0.229 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.515294Z -0.229 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.518600Z -0.223 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:00.518608Z -0.223 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.518612Z -0.223 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.519802Z -0.224 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:00.519811Z -0.224 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.519814Z -0.224 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:00.519817Z -0.224 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:00.519819Z -0.224 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.519822Z -0.224 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.519825Z -0.224 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:00.519827Z -0.224 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:00.519844Z -0.224 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.519848Z -0.224 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.521102Z -0.226 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.521111Z -0.226 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.521114Z -0.226 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.521117Z -0.226 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 29 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.521141Z -0.226 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 29
+2021-01-03T11:44:00.521146Z -0.226 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 29
+2021-01-03T11:44:00.636804Z -0.245 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 30
+2021-01-03T11:44:00.641245Z -0.241 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.641270Z -0.241 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.647503Z -0.238 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:00.647541Z -0.238 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.647553Z -0.238 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.648964Z -0.230 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:00.648975Z -0.230 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.648979Z -0.230 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:00.648982Z -0.231 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:00.648985Z -0.231 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.648988Z -0.231 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.648990Z -0.231 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:00.648993Z -0.231 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:00.649029Z -0.231 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.649033Z -0.231 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.650702Z -0.232 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.650714Z -0.232 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.650718Z -0.232 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.650720Z -0.232 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 30 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.650796Z -0.232 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 30
+2021-01-03T11:44:00.651864Z -0.233 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 30
+2021-01-03T11:44:00.765047Z -0.251 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 31
+2021-01-03T11:44:00.768397Z -0.244 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.768406Z -0.244 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.771783Z -0.238 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:00.771791Z -0.238 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.771795Z -0.238 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.772994Z -0.240 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:00.773003Z -0.240 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.773006Z -0.240 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:00.773009Z -0.240 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:00.773011Z -0.240 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.773014Z -0.240 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.773017Z -0.240 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:00.773020Z -0.240 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:00.773037Z -0.240 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.773041Z -0.240 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.774282Z -0.241 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.774291Z -0.241 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.774300Z -0.241 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.774303Z -0.241 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 31 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.774325Z -0.241 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 31
+2021-01-03T11:44:00.774330Z -0.241 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 31
+2021-01-03T11:44:00.896002Z -0.266 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 32
+2021-01-03T11:44:00.900345Z -0.251 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:00.900353Z -0.251 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.903686Z -0.254 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:00.903695Z -0.254 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.903698Z -0.254 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.904903Z -0.245 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:00.904912Z -0.245 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.904916Z -0.245 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:00.904919Z -0.245 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:00.904921Z -0.245 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:00.904924Z -0.245 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:00.904927Z -0.245 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:00.904929Z -0.245 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:00.904946Z -0.245 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.904950Z -0.245 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:00.906204Z -0.247 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:00.906213Z -0.247 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:00.906216Z -0.247 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:00.906219Z -0.247 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 32 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:00.906243Z -0.247 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 32
+2021-01-03T11:44:00.906248Z -0.247 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 32
+2021-01-03T11:44:01.019870Z -0.263 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 33
+2021-01-03T11:44:01.023240Z -0.258 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:01.023249Z -0.258 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.026555Z -0.252 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:01.026563Z -0.252 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.026567Z -0.252 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.027767Z -0.253 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:01.027776Z -0.253 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.027785Z -0.253 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:01.027788Z -0.253 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:01.027791Z -0.253 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:01.027793Z -0.253 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:01.027796Z -0.253 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:01.027798Z -0.253 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:01.027815Z -0.253 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.027819Z -0.253 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.029086Z -0.255 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:01.029095Z -0.255 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.029098Z -0.255 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:01.029101Z -0.255 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 33 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:01.029124Z -0.255 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 33
+2021-01-03T11:44:01.029128Z -0.255 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 33
+2021-01-03T11:44:01.090243Z -0.259 0   [debug] ../src/node/history.h:699            | Signed at 11 in view: 2 commit was: 2.8
+2021-01-03T11:44:01.090264Z -0.259 0   [debug] ../src/kv/store.h:969                | Store::commit 11 globally_committable
+2021-01-03T11:44:01.092459Z -0.261 0   [trace] ../src/node/history.h:332            | mt_serialize_size 368
+2021-01-03T11:44:01.092468Z -0.261 0   [debug] ../src/node/history.h:85             | History [append] <sha256 dcf8edba4d87197435e4cf99b1f092a3f962777832ce72529e4dfad9ed2ef34d>
+2021-01-03T11:44:01.092471Z -0.261 0   [debug] ../src/kv/store.h:1023               | Batching 11 (653)
+2021-01-03T11:44:01.092474Z -0.261 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T11:44:01.092477Z -0.261 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 11 committable
+2021-01-03T11:44:01.092536Z -0.261 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 11
+2021-01-03T11:44:01.092539Z -0.261 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T11:44:01.092542Z -0.261 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 11, new_commit_bft_idx:9223372036854775807. last_idx: 11
+2021-01-03T11:44:01.092544Z -0.261 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 11 (ci: 8) (ti 2)
+2021-01-03T11:44:01.092560Z -0.261 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T11:44:01.092562Z -0.261 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T11:44:01.092565Z -0.261 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 25ad3cfcc780db601837b971fa6b4294abd807f4af2c286d639cd66654b87e84>
+2021-01-03T11:44:01.092568Z -0.261 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 11
+2021-01-03T11:44:01.151792Z -0.283 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 34
+2021-01-03T11:44:01.155175Z -0.267 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:01.155184Z -0.267 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.158495Z -0.260 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:01.158510Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.158513Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.159706Z -0.261 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 129 bytes
+2021-01-03T11:44:01.159714Z -0.261 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.159718Z -0.261 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 100
+2021-01-03T11:44:01.159720Z -0.261 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 100 bytes
+2021-01-03T11:44:01.159723Z -0.261 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:01.159725Z -0.261 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:01.159728Z -0.261 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/tx?view=2&seqno=10
+2021-01-03T11:44:01.159731Z -0.261 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/tx, view=2&seqno=10, [0 bytes])
+2021-01-03T11:44:01.159749Z -0.261 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.159754Z -0.261 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.161025Z -0.263 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:01.161035Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.161038Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:01.161041Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 34 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:01.161065Z -0.263 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 34
+2021-01-03T11:44:01.161070Z -0.263 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 34
+2021-01-03T11:44:01.166484Z -0.258 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 35
+2021-01-03T11:44:01.171552Z -0.263 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:01.171561Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.178770Z -0.270 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 767 bytes
+2021-01-03T11:44:01.178780Z -0.270 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.178784Z -0.270 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.179995Z -0.262 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 1121 bytes
+2021-01-03T11:44:01.180004Z -0.262 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.180007Z -0.262 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 1092
+2021-01-03T11:44:01.180011Z -0.262 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 1092 bytes
+2021-01-03T11:44:01.180013Z -0.262 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:01.180016Z -0.262 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [952 bytes]
+2021-01-03T11:44:01.180019Z -0.262 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:01.180022Z -0.262 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/query
+2021-01-03T11:44:01.180024Z -0.262 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/query, , [952 bytes])
+2021-01-03T11:44:01.180027Z -0.262 0   [debug] rc/lua_interp/tx_script_runner.h:186 | Service version: nil
+2021-01-03T11:44:01.180030Z -0.262 0   [debug] rc/lua_interp/tx_script_runner.h:186 | Service status: nil
+2021-01-03T11:44:01.180038Z -0.262 0   [debug] rc/lua_interp/tx_script_runner.h:186 | Service cert len: 664
+2021-01-03T11:44:01.180041Z -0.262 0   [debug] rc/lua_interp/tx_script_runner.h:186 | Service cert bytes: nil nil nil
+2021-01-03T11:44:01.180058Z -0.262 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.180062Z -0.262 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.181307Z -0.263 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:01.181316Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.181319Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:01.181322Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 35 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:01.181344Z -0.263 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 35
+2021-01-03T11:44:01.181349Z -0.263 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 35
+2021-01-03T11:44:01.186480Z -0.258 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 36
+2021-01-03T11:44:01.191608Z -0.263 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:01.191618Z -0.263 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.194897Z -0.266 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 206 bytes
+2021-01-03T11:44:01.194906Z -0.266 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.194909Z -0.266 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.196116Z -0.259 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 123 bytes
+2021-01-03T11:44:01.196124Z -0.259 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.196127Z -0.259 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 94
+2021-01-03T11:44:01.196130Z -0.259 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 94 bytes
+2021-01-03T11:44:01.196132Z -0.259 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:01.196135Z -0.259 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:01.196137Z -0.259 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /node/primary_info
+2021-01-03T11:44:01.196140Z -0.259 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /node/primary_info, , [0 bytes])
+2021-01-03T11:44:01.196157Z -0.259 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.196161Z -0.259 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.197437Z -0.260 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:01.197446Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.197449Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:01.197452Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 36 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:01.197474Z -0.260 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 36
+2021-01-03T11:44:01.197480Z -0.260 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 36
+2021-01-03T11:44:01.203411Z -0.266 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 37
+2021-01-03T11:44:01.207820Z -0.270 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T11:44:01.207836Z -0.270 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.215175Z -0.268 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 763 bytes
+2021-01-03T11:44:01.215184Z -0.268 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.215187Z -0.268 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.216395Z -0.260 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 116 bytes
+2021-01-03T11:44:01.216404Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.216407Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 87
+2021-01-03T11:44:01.216410Z -0.260 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 87 bytes
+2021-01-03T11:44:01.216412Z -0.260 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T11:44:01.216415Z -0.260 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T11:44:01.216418Z -0.260 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /app/commit
+2021-01-03T11:44:01.216420Z -0.260 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(GET, /app/commit, , [0 bytes])
+2021-01-03T11:44:01.216423Z -0.260 0   [info ] ../src/node/rpc/frontend.h:455       | Service state is OPEN, now accepting user transactions
+2021-01-03T11:44:01.216440Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.216445Z -0.260 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T11:44:01.217656Z -0.261 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T11:44:01.217665Z -0.261 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T11:44:01.217668Z -0.261 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T11:44:01.217671Z -0.261 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 37 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T11:44:01.217693Z -0.261 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 37
+2021-01-03T11:44:01.217698Z -0.261 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 37
+2021-01-03T12:06:04.293953Z -72.717 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 38
+2021-01-03T12:06:04.297332Z -72.682 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T12:06:04.297341Z -72.682 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:04.304678Z -72.680 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 767 bytes
+2021-01-03T12:06:04.304687Z -72.680 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:04.304690Z -72.680 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:06:04.305888Z -72.681 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 588 bytes
+2021-01-03T12:06:04.305897Z -72.681 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:04.305901Z -72.681 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 559
+2021-01-03T12:06:04.305904Z -72.681 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 559 bytes
+2021-01-03T12:06:04.305907Z -72.681 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T12:06:04.305910Z -72.681 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:04.305913Z -72.681 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:06:05.339860Z -72.737 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 1369 bytes
+2021-01-03T12:06:05.339891Z -72.737 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:05.339894Z -72.737 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 1340
+2021-01-03T12:06:05.339897Z -72.737 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 1340 bytes
+2021-01-03T12:06:05.339899Z -72.737 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [1340 bytes]
+2021-01-03T12:06:05.339902Z -72.737 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T12:06:05.339905Z -72.737 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/proposals
+2021-01-03T12:06:05.339908Z -72.737 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/proposals, , [1340 bytes])
+2021-01-03T12:06:05.339910Z -72.737 0   [debug] ../src/kv/store.h:969                | Store::commit 12
+2021-01-03T12:06:05.339913Z -72.737 0   [debug] ../src/node/history.h:85             | History [append] <sha256 84e1497e0421216eed92307038abd4fcb5836973fa4dbc0a19e4bd62181700aa>
+2021-01-03T12:06:05.339916Z -72.737 0   [debug] ../src/kv/store.h:1023               | Batching 12 (3023)
+2021-01-03T12:06:05.339918Z -72.737 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:06:05.339921Z -72.737 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 12
+2021-01-03T12:06:05.339930Z -72.737 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 12
+2021-01-03T12:06:05.339933Z -72.737 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:06:05.339935Z -72.737 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 12, new_commit_bft_idx:9223372036854775807. last_idx: 12
+2021-01-03T12:06:05.339938Z -72.737 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 12 (ci: 11) (ti 2)
+2021-01-03T12:06:05.339977Z -72.737 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:05.339981Z -72.737 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:06:05.341269Z -72.739 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T12:06:05.341283Z -72.739 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:05.341286Z -72.739 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T12:06:05.341289Z -72.739 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 38 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T12:06:05.341330Z -72.739 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 38
+2021-01-03T12:06:05.341351Z -72.739 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 38
+2021-01-03T12:06:06.089367Z -72.775 0   [debug] ../src/node/history.h:699            | Signed at 13 in view: 2 commit was: 2.11
+2021-01-03T12:06:06.089389Z -72.775 0   [debug] ../src/kv/store.h:969                | Store::commit 13 globally_committable
+2021-01-03T12:06:06.090487Z -72.776 0   [trace] ../src/node/history.h:332            | mt_serialize_size 432
+2021-01-03T12:06:06.090497Z -72.776 0   [debug] ../src/node/history.h:85             | History [append] <sha256 4fc80902ebc43bdea7f17eaa876b76bac4647d140e26d574458a61244ec57e8d>
+2021-01-03T12:06:06.090500Z -72.776 0   [debug] ../src/kv/store.h:1023               | Batching 13 (715)
+2021-01-03T12:06:06.090503Z -72.776 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:06:06.090506Z -72.776 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 13 committable
+2021-01-03T12:06:06.090529Z -72.776 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 13
+2021-01-03T12:06:06.090532Z -72.776 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:06:06.090537Z -72.776 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 13, new_commit_bft_idx:9223372036854775807. last_idx: 13
+2021-01-03T12:06:06.090539Z -72.776 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 13 (ci: 11) (ti 2)
+2021-01-03T12:06:06.090542Z -72.776 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T12:06:06.090545Z -72.776 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T12:06:06.090547Z -72.776 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 6fcb3e5e7b6f09de1f8844c73e3595e2cdf2b48216e7f155e2b4fcf0aa2eeb5e>
+2021-01-03T12:06:06.090551Z -72.776 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 13
+2021-01-03T12:06:51.920146Z -75.246 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 39
+2021-01-03T12:06:51.924627Z -75.221 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T12:06:51.924636Z -75.221 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:51.932012Z -75.219 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 767 bytes
+2021-01-03T12:06:51.932022Z -75.219 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:51.932027Z -75.219 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:06:51.933534Z -75.220 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 628 bytes
+2021-01-03T12:06:51.933544Z -75.220 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:51.933548Z -75.220 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 599
+2021-01-03T12:06:51.933551Z -75.220 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 599 bytes
+2021-01-03T12:06:51.933554Z -75.220 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T12:06:51.933556Z -75.220 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [56 bytes]
+2021-01-03T12:06:51.933559Z -75.220 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T12:06:51.933562Z -75.220 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/proposals/2/votes
+2021-01-03T12:06:51.933565Z -75.220 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/proposals/2/votes, , [56 bytes])
+2021-01-03T12:06:51.933568Z -75.220 0   [debug] ../src/kv/store.h:969                | Store::commit 14
+2021-01-03T12:06:51.933571Z -75.220 0   [debug] ../src/node/history.h:85             | History [append] <sha256 6750d051d6aa952c53d84c2dd66151f63c8559e5a550bef18669c7d81479c46a>
+2021-01-03T12:06:51.933574Z -75.220 0   [debug] ../src/kv/store.h:1023               | Batching 14 (3713)
+2021-01-03T12:06:51.933576Z -75.220 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:06:51.933579Z -75.220 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 14
+2021-01-03T12:06:51.933587Z -75.220 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 14
+2021-01-03T12:06:51.933591Z -75.220 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:06:51.933593Z -75.220 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 14, new_commit_bft_idx:9223372036854775807. last_idx: 14
+2021-01-03T12:06:51.933596Z -75.220 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 14 (ci: 13) (ti 2)
+2021-01-03T12:06:51.933614Z -75.220 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:51.933619Z -75.220 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:06:51.990938Z -75.228 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 39
+2021-01-03T12:06:51.990964Z -75.218 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T12:06:51.990977Z -75.218 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:06:51.990980Z -75.218 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T12:06:51.990982Z -75.219 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 39 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T12:06:51.992126Z -75.220 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 39
+2021-01-03T12:06:52.820183Z -75.265 0   [debug] ../src/node/history.h:699            | Signed at 15 in view: 2 commit was: 2.13
+2021-01-03T12:06:52.820205Z -75.265 0   [debug] ../src/kv/store.h:969                | Store::commit 15 globally_committable
+2021-01-03T12:06:52.821304Z -75.266 0   [trace] ../src/node/history.h:332            | mt_serialize_size 496
+2021-01-03T12:06:52.821313Z -75.266 0   [debug] ../src/node/history.h:85             | History [append] <sha256 9cea30ea678e371affbb237c3415b017142c64545425a432070013295837598e>
+2021-01-03T12:06:52.821316Z -75.266 0   [debug] ../src/kv/store.h:1023               | Batching 15 (779)
+2021-01-03T12:06:52.821319Z -75.266 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:06:52.821322Z -75.266 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 15 committable
+2021-01-03T12:06:52.821345Z -75.266 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 15
+2021-01-03T12:06:52.821348Z -75.266 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:06:52.821351Z -75.266 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 15, new_commit_bft_idx:9223372036854775807. last_idx: 15
+2021-01-03T12:06:52.821354Z -75.266 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 15 (ci: 13) (ti 2)
+2021-01-03T12:06:52.821356Z -75.266 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T12:06:52.821358Z -75.266 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T12:06:52.821361Z -75.266 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 b26cb94f7ee501102c8f062a7eeaefaf74c1d9f44c60c63050c0a2a81db73cb1>
+2021-01-03T12:06:52.821364Z -75.266 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 15
+2021-01-03T12:07:40.443478Z -77.780 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 40
+2021-01-03T12:07:40.446864Z -77.754 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T12:07:40.446873Z -77.754 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:07:40.454571Z -77.753 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 773 bytes
+2021-01-03T12:07:40.454581Z -77.753 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:07:40.454584Z -77.753 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:07:40.455785Z -77.754 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 134 bytes
+2021-01-03T12:07:40.455794Z -77.754 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:07:40.455797Z -77.754 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 105
+2021-01-03T12:07:40.455800Z -77.754 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 105 bytes
+2021-01-03T12:07:40.455803Z -77.754 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T12:07:40.455806Z -77.754 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T12:07:40.455809Z -77.754 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/ack/update_state_digest
+2021-01-03T12:07:40.455813Z -77.754 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/ack/update_state_digest, , [0 bytes])
+2021-01-03T12:07:40.455822Z -77.754 0   [debug] ../src/kv/store.h:969                | Store::commit 16
+2021-01-03T12:07:40.455825Z -77.754 0   [debug] ../src/node/history.h:85             | History [append] <sha256 49acbd39ac929e9bf3fbf7b4cdc4d62161f9dac508a4800024be2699de36004d>
+2021-01-03T12:07:40.455827Z -77.754 0   [debug] ../src/kv/store.h:1023               | Batching 16 (171)
+2021-01-03T12:07:40.455830Z -77.754 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:07:40.455833Z -77.754 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 16
+2021-01-03T12:07:40.455839Z -77.754 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 16
+2021-01-03T12:07:40.455842Z -77.754 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:07:40.455845Z -77.754 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 16, new_commit_bft_idx:9223372036854775807. last_idx: 16
+2021-01-03T12:07:40.455848Z -77.754 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 16 (ci: 15) (ti 2)
+2021-01-03T12:07:40.455865Z -77.754 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:07:40.455869Z -77.754 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:07:40.457057Z -77.756 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T12:07:40.457067Z -77.756 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:07:40.457071Z -77.756 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T12:07:40.457073Z -77.756 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 40 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T12:07:40.457099Z -77.756 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 40
+2021-01-03T12:07:40.457104Z -77.756 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 40
+2021-01-03T12:07:40.459303Z -77.748 0   [debug] ../src/node/history.h:699            | Signed at 17 in view: 2 commit was: 2.15
+2021-01-03T12:07:40.459312Z -77.748 0   [debug] ../src/kv/store.h:969                | Store::commit 17 globally_committable
+2021-01-03T12:07:40.460407Z -77.749 0   [trace] ../src/node/history.h:332            | mt_serialize_size 560
+2021-01-03T12:07:40.460416Z -77.749 0   [debug] ../src/node/history.h:85             | History [append] <sha256 b81503e8144d3f0e24c18cc49f24554613fc99cda4a2cc7fa006503950594c61>
+2021-01-03T12:07:40.460420Z -77.749 0   [debug] ../src/kv/store.h:1023               | Batching 17 (844)
+2021-01-03T12:07:40.460422Z -77.749 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:07:40.460425Z -77.749 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 17 committable
+2021-01-03T12:07:40.460436Z -77.749 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 17
+2021-01-03T12:07:40.460439Z -77.749 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:07:40.460441Z -77.749 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 17, new_commit_bft_idx:9223372036854775807. last_idx: 17
+2021-01-03T12:07:40.460444Z -77.749 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 17 (ci: 15) (ti 2)
+2021-01-03T12:07:40.460447Z -77.749 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T12:07:40.460449Z -77.749 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T12:07:40.460452Z -77.749 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 edf534c9af36f9c039e1c17e32125bfe6f0d8f892801877595d01d51cb6b7e7c>
+2021-01-03T12:07:40.460455Z -77.749 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 17
+2021-01-03T12:09:00.921922Z -82.136 0   [debug] ../src/enclave/rpc_sessions.h:85     | Accepting a session inside the enclave: 41
+2021-01-03T12:09:00.925308Z -82.100 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 517 bytes
+2021-01-03T12:09:00.925317Z -82.100 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:09:00.932653Z -82.097 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 773 bytes
+2021-01-03T12:09:00.932662Z -82.097 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:09:00.932665Z -82.097 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:09:00.933870Z -82.098 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 642 bytes
+2021-01-03T12:09:00.933880Z -82.098 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:09:00.933883Z -82.098 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: 613
+2021-01-03T12:09:00.933886Z -82.098 0   [trace] ../src/http/http_endpoint.h:98       | Going to parse 613 bytes
+2021-01-03T12:09:00.933889Z -82.098 0   [trace] ../src/http/http_parser.h:275        | Entering new message
+2021-01-03T12:09:00.933892Z -82.098 0   [trace] ../src/http/http_parser.h:262        | Appending chunk [84 bytes]
+2021-01-03T12:09:00.933894Z -82.098 0   [trace] ../src/http/http_parser.h:293        | Done with message
+2021-01-03T12:09:00.933897Z -82.098 0   [trace] ../src/http/http_parser.h:141        | Received url to parse: /gov/ack
+2021-01-03T12:09:00.933900Z -82.098 0   [trace] ../src/http/http_endpoint.h:167      | Processing msg(POST, /gov/ack, , [84 bytes])
+2021-01-03T12:09:00.933903Z -82.098 0   [debug] ../src/kv/store.h:969                | Store::commit 18
+2021-01-03T12:09:00.933905Z -82.098 0   [debug] ../src/node/history.h:85             | History [append] <sha256 a64366f3d38e9f0edd4bd90b2f3ba03eb7222fadeeaf5ea9246330702609f570>
+2021-01-03T12:09:00.933908Z -82.098 0   [debug] ../src/kv/store.h:1023               | Batching 18 (2299)
+2021-01-03T12:09:00.933911Z -82.098 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:09:00.933913Z -82.098 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 18
+2021-01-03T12:09:00.933921Z -82.098 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 18
+2021-01-03T12:09:00.933924Z -82.098 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:09:00.933927Z -82.098 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 18, new_commit_bft_idx:9223372036854775807. last_idx: 18
+2021-01-03T12:09:00.933930Z -82.098 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 18 (ci: 17) (ti 2)
+2021-01-03T12:09:00.933948Z -82.098 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:09:00.933952Z -82.098 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -26880
+2021-01-03T12:09:00.935135Z -82.091 0   [trace] ../src/http/http_endpoint.h:56       | recv called with 31 bytes
+2021-01-03T12:09:00.935144Z -82.091 0   [trace] ../src/enclave/tls_endpoint.h:120    | Requesting up to 4096 bytes
+2021-01-03T12:09:00.935147Z -82.091 0   [trace] ../src/enclave/tls_endpoint.h:155    | ctx->read returned: -30848
+2021-01-03T12:09:00.935150Z -82.091 0   [trace] ../src/enclave/tls_endpoint.h:163    | TLS 41 on read: SSL - The peer notified us that the connection is going to be closed
+2021-01-03T12:09:00.935175Z -82.091 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 41
+2021-01-03T12:09:00.935180Z -82.091 0   [debug] ../src/enclave/rpc_sessions.h:113    | Closing a session inside the enclave: 41
+2021-01-03T12:09:01.230785Z -82.116 0   [debug] ../src/node/history.h:699            | Signed at 19 in view: 2 commit was: 2.17
+2021-01-03T12:09:01.230807Z -82.116 0   [debug] ../src/kv/store.h:969                | Store::commit 19 globally_committable
+2021-01-03T12:09:01.231914Z -82.117 0   [trace] ../src/node/history.h:332            | mt_serialize_size 624
+2021-01-03T12:09:01.231923Z -82.117 0   [debug] ../src/node/history.h:85             | History [append] <sha256 20b2d3cce083a2df3835a828f58854a861f6377cb351a19b994173a6414e251c>
+2021-01-03T12:09:01.231926Z -82.117 0   [debug] ../src/kv/store.h:1023               | Batching 19 (907)
+2021-01-03T12:09:01.231929Z -82.117 0   [debug] ../src/consensus/aft/raft.h:427      | Replicating 1 entries
+2021-01-03T12:09:01.231931Z -82.117 0   [debug] ../src/consensus/aft/raft.h:440      | Replicated on leader 0: 19 committable
+2021-01-03T12:09:01.231948Z -82.117 0   [debug] ../src/consensus/aft/impl/state.h:38 | Updating view to: 2 at version: 19
+2021-01-03T12:09:01.231951Z -82.117 0   [debug] ../src/consensus/aft/impl/state.h:55 | Resulting views: 1, 1
+2021-01-03T12:09:01.231954Z -82.117 0   [debug] ../src/consensus/aft/raft.h:1963     | In update_commit, new_commit_cft_idx: 19, new_commit_bft_idx:9223372036854775807. last_idx: 19
+2021-01-03T12:09:01.231957Z -82.117 0   [debug] ../src/consensus/aft/raft.h:1990     | Commit if possible 19 (ci: 17) (ti 2)
+2021-01-03T12:09:01.231959Z -82.117 0   [debug] ../src/consensus/aft/raft.h:2018     | Starting commit
+2021-01-03T12:09:01.231961Z -82.117 0   [debug] ../src/consensus/aft/raft.h:2027     | Compacting...
+2021-01-03T12:09:01.231964Z -82.117 0   [debug] ../src/node/history.h:85             | History [compact] <sha256 04a87d86801190bd8d8861835bd7494f90d7be52e5753eaa90703b74f2ff1b66>
+2021-01-03T12:09:01.231968Z -82.117 0   [debug] ../src/consensus/aft/raft.h:2037     | Commit on 0: 19

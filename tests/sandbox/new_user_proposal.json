@@ -1,0 +1,8 @@
+{
+  "script": {
+    "text": "tables, args = ...;\nreturn Calls:call(\"new_user\", args)"
+  },
+  "parameter": {
+    "cert": "-----BEGIN CERTIFICATE-----\nMIIBsjCCATigAwIBAgIUevbKN1+8oAYGBZL1VkFs7ojcLC0wCgYIKoZIzj0EAwMw\nEDEOMAwGA1UEAwwFdXNlcjAwHhcNMjEwMTAzMTE0MzU2WhcNMjIwMTAzMTE0MzU2\nWjAQMQ4wDAYDVQQDDAV1c2VyMDB2MBAGByqGSM49AgEGBSuBBAAiA2IABMkHxe/b\ntvHkgCqhEuG9yg5eSJ2fvAqo2mmvgfZheQazb+bs7BNdahk8uwPszNfgIMdcgAgd\nKteAl3X+KS/YIQDVu7HjlYtVheLxadZt1AyJoNJcMR0ggou9EfOp9PvjVKNTMFEw\nHQYDVR0OBBYEFCbk4ES/EGT+q63L4K+xyi4wNzQ0MB8GA1UdIwQYMBaAFCbk4ES/\nEGT+q63L4K+xyi4wNzQ0MA8GA1UdEwEB/wQFMAMBAf8wCgYIKoZIzj0EAwMDaAAw\nZQIwK/eFRexmR3JH2ZOuHyGc5AUtE4qioXhlx5Pt4zqmybUzjNu7lMGASWdSsdG3\n7SFkAjEAhPjAOyW40aWKnLvumrs99HIE62xBM3X80I7VOHrNzuWQ2Hkly0tFQYfc\nSx/H9+rq\n-----END CERTIFICATE-----\n"
+  }
+}
